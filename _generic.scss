@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+//colors
+
+$neon: #2aefc3;
+$light-grey: #cad1da;
+$dark-1: #161b21;
+$white-ish: #fdfdfd;
+$dark-2: #1a2027;
+$dark-3-darkest: #0d1218;
+$dark-grey: #5d656f;
+$blue-grey: #29323d;
+$medium-grey: #818a96;
+$yellow: #ffbf46;
+$dark-neon: #41bda1;
+$off-white: #f3f3f3;
+$dusty-white: #e9e9e9;
+$red: #ef2a56;
+
+// fonts
+
+@font-face {
+  font-family: "Mont";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/fonts/Mont/Mont-Regular.otf") format("truetype");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: "Mont";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/assets/fonts/Mont/Mont-SemiBold.otf") format("truetype");
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+body {
+  font-family: "Mont", sans-serif;
+  font-weight: 600;
+}
+
+.font-weight-regular {
+  font-weight: 400;
+}
+
+// container grid
+
+.container {
+  margin: 0 24px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 9px 20px;
+}
