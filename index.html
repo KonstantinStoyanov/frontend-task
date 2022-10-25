@@ -116,12 +116,144 @@
         </section>
         <section class="product">
           <div class="product-images">
-            <ul class="product-images-container-small"></ul>
-            <ul class="product-images-container-large"></ul>
+            <ul class="product-images-small-container">
+              <li class="product-images-small-item">
+                <a
+                  href="#"
+                  class="product-images-small-btn active"
+                  data-slide="1"
+                >
+                  <img src="/assets/images/small-1.png" alt="small-1" />
+                </a>
+              </li>
+              <li class="product-images-small-item">
+                <a href="#" class="product-images-small-btn" data-slide="2">
+                  <img src="/assets/images/small-2.png" alt="small-2" />
+                </a>
+              </li>
+              <li class="product-images-small-item">
+                <a href="#" class="product-images-small-btn" data-slide="3">
+                  <img src="/assets/images/small-3.png" alt="small-3" />
+                </a>
+              </li>
+              <li class="product-images-small-item">
+                <a href="#" class="product-images-small-btn" data-slide="4">
+                  <img src="/assets/images/small-4.png" alt="small-4" />
+                </a>
+              </li>
+            </ul>
+            <ul class="product-images-large-container">
+              <li class="product-images-large-item">
+                <a
+                  href="#"
+                  class="product-images-large-btn active"
+                  data-slide="1"
+                  ><span>
+                    <img src="/assets/images/large-1.png" alt="large-1" />
+                  </span>
+                </a>
+              </li>
+              <li class="product-images-large-item">
+                <a href="#" class="product-images-large-btn" data-slide="2">
+                  <img src="/assets/images/large-2.png" alt="large-2" />
+                </a>
+              </li>
+              <li class="product-images-large-item">
+                <a href="#" class="product-images-large-btn" data-slide="3">
+                  <img src="/assets/images/small-3.png" alt="small-3" />
+                </a>
+              </li>
+              <li class="product-images-large-item">
+                <a href="#" class="product-images-large-btn" data-slide="4">
+                  <img src="/assets/images/small-4.png" alt="small-3" />
+                </a>
+              </li>
+              <li class="product-images-arrows">
+                <button onclick="changeSlideBtn(event,'-1')">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21.475"
+                    height="40.122"
+                    viewBox="0 0 21.475 40.122"
+                  >
+                    <path
+                      data-name="Path 26392"
+                      d="m-14966.031-6900.053-18.646-18.646 18.646-18.647"
+                      transform="translate(14986.092 6938.761)"
+                      style="
+                        fill: none;
+                        stroke: #fff;
+                        stroke-linecap: round;
+                        stroke-width: 2px;
+                      "
+                    />
+                  </svg>
+                </button>
+                <button onclick="changeSlideBtn(event,'1')">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21.475"
+                    height="40.122"
+                    viewBox="0 0 21.475 40.122"
+                  >
+                    <path
+                      data-name="Path 26393"
+                      d="m-14966.031-6900.053-18.646-18.646 18.646-18.647"
+                      transform="rotate(180 -7482.309 -3449.32)"
+                      style="
+                        fill: none;
+                        stroke: #fff;
+                        stroke-linecap: round;
+                        stroke-width: 2px;
+                      "
+                    />
+                  </svg>
+                </button>
+              </li>
+            </ul>
           </div>
           <div class="product-info">product-info</div>
         </section>
       </div>
     </main>
+    <script>
+      document
+        .querySelectorAll(".product-images-small-btn")
+        .forEach((element) => {
+          element.addEventListener("click", (e) => {
+            return changeSlider(e);
+          });
+        });
+      const changeSlider = (e, id) => {
+        document
+          .querySelectorAll(".product-images .active")
+          .forEach((active) => active.classList.remove("active"));
+
+        document
+          .querySelectorAll(
+            `.product-images [data-slide='${
+              id ? id : e.target.getAttribute("data-slide")
+            }']`
+          )
+          .forEach((element) => {
+            element.classList.add("active");
+          });
+      };
+      const changeSlideBtn = (e, increment) => {
+        let id = document
+          .querySelector(".product-images .active")
+          .getAttribute("data-slide");
+        id = Number(id) + Number(increment);
+
+        if (
+          id >
+          document.querySelector(".product-images-small-container")
+            .childElementCount
+        ) {
+          id = 1;
+        }
+        return changeSlider(e, id);
+      };
+    </script>
   </body>
 </html>
