@@ -82,6 +82,7 @@
   justify-content: space-between;
   padding: 0 19px;
   background-color: $blue-grey;
+  gap: 5px;
   img {
     margin-right: 8px;
   }
@@ -481,5 +482,41 @@
         }
       }
     }
+  }
+}
+.mobile-menu {
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .nav-bar {
+    min-width: 100vw;
+    overflow: auto;
+    gap: 15px;
+    &-link {
+      white-space: nowrap;
+    }
+  }
+  .product-images,
+  .product-info {
+    grid-column: span 12;
+    margin-bottom: 25px;
+  }
+  .mobile-menu {
+    display: block;
+    svg {
+      fill: $neon;
+    }
+  }
+  .top-nav-links,
+  .top-nav-search {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .product-images-small-container {
+    display: none;
+  }
+  .product-images-large-container {
+    min-height: 300px;
   }
 }
