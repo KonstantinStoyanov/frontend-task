@@ -115,104 +115,248 @@
           </ul>
         </section>
         <section class="product">
-          <div class="product-images">
-            <ul class="product-images-small-container">
-              <li class="product-images-small-item">
-                <a
-                  href="#"
-                  class="product-images-small-btn active"
-                  data-slide="1"
+          <div class="container">
+            <div class="product-images">
+              <ul class="product-images-small-container">
+                <li class="product-images-small-item">
+                  <a
+                    href="#"
+                    class="product-images-small-btn active"
+                    data-slide="1"
+                  >
+                    <img src="./assets/images/small-1.png" alt="small-1" />
+                  </a>
+                </li>
+                <li class="product-images-small-item">
+                  <a href="#" class="product-images-small-btn" data-slide="2">
+                    <img src="./assets/images/small-2.png" alt="small-2" />
+                  </a>
+                </li>
+                <li class="product-images-small-item">
+                  <a href="#" class="product-images-small-btn" data-slide="3">
+                    <img src="./assets/images/small-3.png" alt="small-3" />
+                  </a>
+                </li>
+                <li class="product-images-small-item">
+                  <a href="#" class="product-images-small-btn" data-slide="4">
+                    <img src="./assets/images/small-4.png" alt="small-4" />
+                  </a>
+                </li>
+              </ul>
+              <ul class="product-images-large-container">
+                <li class="product-images-large-item">
+                  <a
+                    href="#"
+                    class="product-images-large-btn active"
+                    data-slide="1"
+                    ><span>
+                      <img src="./assets/images/large-1.png" alt="large-1" />
+                    </span>
+                  </a>
+                </li>
+                <li class="product-images-large-item">
+                  <a href="#" class="product-images-large-btn" data-slide="2">
+                    <img src="./assets/images/large-2.png" alt="large-2" />
+                  </a>
+                </li>
+                <li class="product-images-large-item">
+                  <a href="#" class="product-images-large-btn" data-slide="3">
+                    <img src="./assets/images/small-3.png" alt="small-3" />
+                  </a>
+                </li>
+                <li class="product-images-large-item">
+                  <a href="#" class="product-images-large-btn" data-slide="4">
+                    <img src="./assets/images/small-4.png" alt="small-3" />
+                  </a>
+                </li>
+                <li class="product-images-arrows">
+                  <button onclick="changeSlideBtn(event,'-1')">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21.475"
+                      height="40.122"
+                      viewBox="0 0 21.475 40.122"
+                    >
+                      <path
+                        data-name="Path 26392"
+                        d="m-14966.031-6900.053-18.646-18.646 18.646-18.647"
+                        transform="translate(14986.092 6938.761)"
+                        style="
+                          fill: none;
+                          stroke: #fff;
+                          stroke-linecap: round;
+                          stroke-width: 2px;
+                        "
+                      />
+                    </svg>
+                  </button>
+                  <button onclick="changeSlideBtn(event,'1')">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="21.475"
+                      height="40.122"
+                      viewBox="0 0 21.475 40.122"
+                    >
+                      <path
+                        data-name="Path 26393"
+                        d="m-14966.031-6900.053-18.646-18.646 18.646-18.647"
+                        transform="rotate(180 -7482.309 -3449.32)"
+                        style="
+                          fill: none;
+                          stroke: #fff;
+                          stroke-linecap: round;
+                          stroke-width: 2px;
+                        "
+                      />
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="product-info">
+              <div class="product-info-promo">
+                <p><span>Онлайн промоция</span></p>
+                <p>Офертата е валидна от 21.06.2021 до 14.07.2021</p>
+              </div>
+              <div class="product-info-header">
+                <h1>Телевизор Sony BRAVIA XR MASTER Series A90J 65’</h1>
+                <p class="product-info-header__sub">
+                  A90J | BRAVIA XR | MASTER Series| OLED | 4K Ultra HD | Висок
+                  динамичен обхват (HDR) | Smart TV (Google TV)
+                </p>
+              </div>
+              <div class="product-info-stock">
+                <p class="product-info-stock__code">Код: 648571</p>
+                <p class="product-info-stock__stock">
+                  <span class="in-stock">В наличност</span>
+                </p>
+                <a href="#" class="product-info-stock__share"
+                  ><img src="./assets/icons/share-icon.png" alt="share icon" />
+                  Сподели</a
                 >
-                  <img src="./assets/images/small-1.png" alt="small-1" />
-                </a>
-              </li>
-              <li class="product-images-small-item">
-                <a href="#" class="product-images-small-btn" data-slide="2">
-                  <img src="./assets/images/small-2.png" alt="small-2" />
-                </a>
-              </li>
-              <li class="product-images-small-item">
-                <a href="#" class="product-images-small-btn" data-slide="3">
-                  <img src="./assets/images/small-3.png" alt="small-3" />
-                </a>
-              </li>
-              <li class="product-images-small-item">
-                <a href="#" class="product-images-small-btn" data-slide="4">
-                  <img src="./assets/images/small-4.png" alt="small-4" />
-                </a>
-              </li>
-            </ul>
-            <ul class="product-images-large-container">
-              <li class="product-images-large-item">
-                <a
-                  href="#"
-                  class="product-images-large-btn active"
-                  data-slide="1"
-                  ><span>
-                    <img src="./assets/images/large-1.png" alt="large-1" />
+              </div>
+              <div class="product-info-price">
+                <div class="flex">
+                  <div class="product-info-price__new">5 026,30 лв</div>
+                  <div class="product-info-price__old">5 026,30 лв</div>
+                </div>
+
+                <div class="product-info-price__save">Спестяваш: 900 лв</div>
+              </div>
+              <div class="product-info-color">
+                <p>Избери цвят:</p>
+                <ul class="product-info-color__container">
+                  <li class="product-info-color__item">
+                    <a
+                      href="#"
+                      class="product-info-color__color active"
+                      onclick="toggleActive(event)"
+                      data-title="Черен"
+                    >
+                      <div>
+                        <img src="./assets/images/color.png" alt="color" />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="product-info-color__item">
+                    <a
+                      href="#"
+                      class="product-info-color__color"
+                      onclick="toggleActive(event)"
+                      data-title="Черен"
+                    >
+                      <div>
+                        <img src="./assets/images/color.png" alt="color" />
+                      </div>
+                    </a>
+                  </li>
+                  <li class="product-info-color__item">
+                    <a
+                      href="#"
+                      class="product-info-color__color"
+                      onclick="toggleActive(event)"
+                      data-title="Черен"
+                    >
+                      <div>
+                        <img src="./assets/images/color.png" alt="color" />
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="product-info-delivery">
+                <p>
+                  <span>
+                    <img
+                      src="./assets/icons/delivery-icon.png"
+                      alt="delivery-icon"
+                    />
                   </span>
-                </a>
-              </li>
-              <li class="product-images-large-item">
-                <a href="#" class="product-images-large-btn" data-slide="2">
-                  <img src="./assets/images/large-2.png" alt="large-2" />
-                </a>
-              </li>
-              <li class="product-images-large-item">
-                <a href="#" class="product-images-large-btn" data-slide="3">
-                  <img src="./assets/images/small-3.png" alt="small-3" />
-                </a>
-              </li>
-              <li class="product-images-large-item">
-                <a href="#" class="product-images-large-btn" data-slide="4">
-                  <img src="./assets/images/small-4.png" alt="small-3" />
-                </a>
-              </li>
-              <li class="product-images-arrows">
-                <button onclick="changeSlideBtn(event,'-1')">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="21.475"
-                    height="40.122"
-                    viewBox="0 0 21.475 40.122"
-                  >
-                    <path
-                      data-name="Path 26392"
-                      d="m-14966.031-6900.053-18.646-18.646 18.646-18.647"
-                      transform="translate(14986.092 6938.761)"
-                      style="
-                        fill: none;
-                        stroke: #fff;
-                        stroke-linecap: round;
-                        stroke-width: 2px;
-                      "
+                  Безплатна доставка
+                </p>
+                <p>
+                  <span>
+                    <img
+                      src="./assets/icons/return-icon.png"
+                      alt="return-icon"
                     />
-                  </svg>
-                </button>
-                <button onclick="changeSlideBtn(event,'1')">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="21.475"
-                    height="40.122"
-                    viewBox="0 0 21.475 40.122"
-                  >
-                    <path
-                      data-name="Path 26393"
-                      d="m-14966.031-6900.053-18.646-18.646 18.646-18.647"
-                      transform="rotate(180 -7482.309 -3449.32)"
-                      style="
-                        fill: none;
-                        stroke: #fff;
-                        stroke-linecap: round;
-                        stroke-width: 2px;
-                      "
-                    />
-                  </svg>
-                </button>
-              </li>
-            </ul>
+                  </span>
+                  14 дни право на връщане
+                </p>
+                <p>
+                  <span>
+                    <img
+                      src="./assets/icons/warranty-icon.png"
+                      alt="warranty-icon"
+                  /></span>
+                  24 месеца гаранция
+                </p>
+              </div>
+              <div class="product-info-warranty">
+                <p>
+                  <img src="./assets/icons/tick-icon.png" alt="tick-icon" />
+                  Защити техниката си с удължена гаранция
+                </p>
+                <a href="#">Виж повече</a>
+              </div>
+              <div class="product-info-btn">
+                <a href="" class="product-info-btn__cart">
+                  <img src="./assets/icons/cart-icon.png" alt="cart-icon" />
+                  Добави в количка
+                </a>
+                <a href="" class="product-info-btn__credit">
+                  <div>
+                    Купи с кредит от <span>TBIBank</span> на 12 вноски по 468.72
+                    лв.
+                  </div>
+                </a>
+              </div>
+              <div class="product-info-links">
+                <a href="#">
+                  <span>
+                    <img src="./assets/icons/heart-icon.png" alt="heart-icon" />
+                  </span>
+                  Добави в любими
+                </a>
+                <a href="#">
+                  <span>
+                    <img
+                      src="./assets/icons/compare-icon.png"
+                      alt="compare-icon"
+                  /></span>
+                  Сравни
+                </a>
+                <a href="#">
+                  <span>
+                    <img
+                      src="./assets/icons/download-icon.png"
+                      alt="download-icon"
+                  /></span>
+                  Свали продуктов фиш
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="product-info">product-info</div>
         </section>
       </div>
     </main>
@@ -232,7 +376,7 @@
         document
           .querySelectorAll(
             `.product-images [data-slide='${
-              id ? id : e.target.getAttribute("data-slide")
+              id ? id : e.currentTarget.getAttribute("data-slide")
             }']`
           )
           .forEach((element) => {
@@ -253,6 +397,13 @@
           id = 1;
         }
         return changeSlider(e, id);
+      };
+      const toggleActive = (e) => {
+        e.preventDefault();
+        document
+          .querySelectorAll(".product-info-color__color.active")
+          .forEach((element) => element.classList.remove("active"));
+        e.currentTarget.classList.add("active");
       };
     </script>
   </body>

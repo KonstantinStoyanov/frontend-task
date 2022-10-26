@@ -9,6 +9,9 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+  img {
+    pointer-events: none;
+  }
 }
 
 //colors
@@ -28,6 +31,9 @@ $dark-neon: #41bda1;
 $off-white: #f3f3f3;
 $dusty-white: #e9e9e9;
 $red: #ef2a56;
+$product-code: #6d6d6d;
+$in-stock: #0ebe98;
+$black: #000000;
 
 // fonts
 
@@ -65,4 +71,8 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 9px 20px;
+}
+
+.flex {
+  display: flex;
 }

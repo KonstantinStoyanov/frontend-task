@@ -9,11 +9,9 @@
   justify-content: space-between;
   padding: 0 19px;
   &-search {
-    // flex-grow: 1;
     width: 21%;
     .input-field {
       position: relative;
-      //   width: 403px;
       &::before {
         content: url("./assets/icons/search-icon.png");
         position: absolute;
@@ -140,20 +138,20 @@
 .product {
   display: flex;
   gap: 24px;
-  .product-images,
-  .product-info {
-    width: 50%;
+  .container {
+    margin: 0;
   }
+
   &-images {
     display: flex;
     position: relative;
+    grid-column: span 6;
     img {
       width: 100%;
       height: auto;
       object-fit: cover;
       object-position: center;
       pointer-events: none;
-      // cursor: inherit;
     }
     &-small {
       &-container {
@@ -201,7 +199,7 @@
         opacity: 0;
         transition: opacity 1000ms ease-in-out 0s;
         cursor: zoom-in;
-
+        max-height: 612px;
         &.active {
           opacity: 1;
         }
@@ -226,5 +224,262 @@
     }
   }
   &-info {
+    grid-column: span 5;
+    &-promo {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 15px;
+      p {
+        font-size: 12px;
+        line-height: 16px;
+        color: $dark-grey;
+        font-weight: 400;
+      }
+      span {
+        background-color: $yellow;
+        border-radius: 45px;
+        width: 158px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $dark-1;
+      }
+    }
+    &-header {
+      border-bottom: 1px solid $light-grey;
+      margin-bottom: 16px;
+      h1 {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 16px;
+        letter-spacing: 3%;
+      }
+      &__sub {
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 3%;
+        font-weight: 400;
+        margin-bottom: 18px;
+      }
+    }
+    &-stock {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 400;
+      &__code {
+        color: $product-code;
+        padding-right: 8px;
+        border-right: 1px solid $product-code;
+      }
+      &__stock {
+        span {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          &:after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: block;
+          }
+          &.in-stock {
+            color: $in-stock;
+            &:after {
+              background-color: $in-stock;
+            }
+          }
+        }
+      }
+      &__share {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+    }
+    &-price {
+      margin: 40px 0 45px;
+      font-size: 32px;
+      line-height: 46px;
+      &__old {
+        margin-left: 26px;
+        color: $medium-grey;
+        text-decoration-line: line-through;
+        font-weight: 500;
+      }
+      &__save {
+        font-size: 12px;
+        line-height: 17px;
+        color: $yellow;
+      }
+    }
+    &-color {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 40px;
+      p {
+        font-size: 14px;
+        line-height: 18px;
+        color: $black;
+      }
+      &__container {
+        display: flex;
+        align-items: center;
+      }
+      &__item {
+        &:not(:last-of-type) {
+          margin-right: 4px;
+        }
+      }
+      &__color {
+        width: 46px;
+        height: 46px;
+        padding: 5px;
+        display: block;
+        position: relative;
+
+        div {
+          width: 36px;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $img-background;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+        &.active {
+          border: 1px solid $dark-grey;
+        }
+        &.active,
+        &.active:hover,
+        &:hover {
+          &:before {
+            content: attr(data-title);
+            display: block;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 5px 12px;
+            color: $white-ish;
+            border-radius: 3px;
+            font-size: 12px;
+            line-height: 15px;
+            background-color: $dark-grey;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            width: 7.59px;
+            height: 6.7px;
+            top: -7px;
+            left: 50%;
+            background-color: $dark-grey;
+            transform: matrix(0.45, 1.01, -0.74, 0.55, 0, 0) translateX(-50%);
+          }
+        }
+        &:hover {
+          &:before,
+          &:after {
+            color: $dark-grey;
+            background-color: $white-ish;
+            box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+    &-delivery,
+    &-links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      font-size: 14px;
+      line-height: 18px;
+      color: $medium-grey;
+      margin-bottom: 24px;
+      p,
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      span {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2px;
+      }
+    }
+    &-warranty {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      height: 50px;
+      background-color: $blue-grey;
+      font-size: 14px;
+      line-height: 18px;
+
+      color: $yellow;
+      margin-bottom: 24px;
+      p {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        font-weight: 500;
+      }
+      a {
+        text-decoration: underline;
+      }
+    }
+    &-btn {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 24px;
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        min-height: 55px;
+        padding: 8px 50px;
+      }
+      &__cart {
+        letter-spacing: 0.03em;
+        gap: 16px;
+        background-color: $dark-1;
+        color: $light-grey;
+        img {
+          margin-bottom: 5px;
+        }
+      }
+      &__credit {
+        border: 1px solid $yellow;
+        color: $dark-2;
+        font-size: 14px;
+        div {
+          text-align: center;
+          max-width: 240px;
+        }
+        span {
+          color: $yellow;
+          font-weight: 600;
+        }
+      }
+    }
   }
 }
