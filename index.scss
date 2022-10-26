@@ -519,4 +519,21 @@
   .product-images-large-container {
     min-height: 300px;
   }
+  .product-info-btn a {
+    grid-column: span 2;
+  }
+  .top-nav-logo {
+    max-width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  .product-info-delivery,
+  .product-info-links {
+    flex-wrap: wrap;
+    gap: 10px 20px;
+  }
+  .breadcrumb-item:first-of-type {
+    display: none;
+  }
 }
